@@ -1,5 +1,5 @@
-<h3>Sample documents:</h3>
-<p>This only shows the first {{ character_limit }} characters of each document </p> 
+<h3>Search results:</h3>
+<p>Looking for documents containing the word(s) {{ keywords }}. This only shows the first {{ character_limit }} characters of each document.</p> 
 
 {% for doc in documents %}
     <div style="border:1px solid black;"><pre>{{ doc['content']|truncate(character_limit) }}</pre></div>
