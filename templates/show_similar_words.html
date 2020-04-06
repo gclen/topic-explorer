@@ -1,0 +1,23 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+    padding: 15px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Keyword</th>
+        <th>Related word</th>
+        <th>Similarity</th>
+    </tr>
+    {% for word in words %}
+    <tr>
+      <td>{{ word['original_word'] }}</td>
+      <td>{{ word['word'] }}</td>
+      <td>{{ word['score'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
